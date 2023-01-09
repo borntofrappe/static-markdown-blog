@@ -14,9 +14,9 @@
 	<h2>Blog</h2>
 	<p>There are currently {data.blog.length} articles in the blog:</p>
 	<ul>
-		{#each data.blog as { title, brief }}
+		{#each data.blog as { title, brief, href }}
 			<li>
-				<h3>{title}</h3>
+				<a href="/{href}"><h3>{title}</h3></a>
 				<p>{brief}</p>
 			</li>
 		{/each}

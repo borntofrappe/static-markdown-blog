@@ -14,10 +14,10 @@
 	<h2>Blog</h2>
 	<p>There are currently {data.blog.length} articles in the blog:</p>
 	<ul>
-		{#each data.blog as { title, date }}
+		{#each data.blog as { title, brief }}
 			<li>
 				<h3>{title}</h3>
-				<p>Dated <time datetime={date}>{date.toDateString()}</time></p>
+				<p>{brief}</p>
 			</li>
 		{/each}
 	</ul>

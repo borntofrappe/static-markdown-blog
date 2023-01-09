@@ -4,22 +4,27 @@
 </script>
 
 <svelte:head>
-	<title>static-markdown-blog</title>
-	<meta name="description" content="A static markdown blog with SvelteKit and GitHub Pages." />
+	<title>Alice in Wonderland</title>
+	<meta name="description" content="All in the golden afternoon, full leisurely we glide." />
 </svelte:head>
 
-<h1>static-markdown-blog</h1>
-<p>Hello world</p>
+<h1>Alice in Wonderland</h1>
 
 {#if data.blog}
-	<h2>Blog</h2>
-	<p>There are currently {data.blog.length} articles in the blog:</p>
 	<ul>
-		{#each data.blog as { title, brief, href }}
+		{#each data.blog as { title, description, href }}
 			<li>
 				<a href="{base}/{href}"><h3>{title}</h3></a>
-				<p>{brief}</p>
+				<p>{description}</p>
 			</li>
 		{/each}
 	</ul>
 {/if}
+
+<style>
+	ul {
+		padding: 0;
+		list-style: none;
+		list-style-position: inside;
+	}
+</style>

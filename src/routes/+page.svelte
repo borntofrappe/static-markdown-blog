@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	export let data;
 </script>
 
@@ -16,7 +17,7 @@
 	<ul>
 		{#each data.blog as { title, brief, href }}
 			<li>
-				<a href="/{href}"><h3>{title}</h3></a>
+				<a href="{base}/{href}"><h3>{title}</h3></a>
 				<p>{brief}</p>
 			</li>
 		{/each}

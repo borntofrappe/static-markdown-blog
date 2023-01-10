@@ -4,10 +4,7 @@ const dev = process.argv.includes('dev');
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			pages: 'docs',
-			assets: 'docs'
-		}),
+		adapter: adapter(),
 		paths: {
 			base: dev ? '' : '/static-markdown-blog'
 		}

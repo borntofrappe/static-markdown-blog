@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"deploy": "vite build && gh-pages -d build -b build -t true -m build",
 		"preview": "vite preview",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write ."
@@ -15,6 +16,7 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"gh-pages": "^4.0.0",
 		"gray-matter": "^4.0.3",
 		"marked": "^4.2.5",
 		"prettier": "^2.8.0",
